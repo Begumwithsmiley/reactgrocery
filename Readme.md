@@ -1,4 +1,4 @@
 - [ ] Integration with Metamask  
-- [ ] Implement TailWind  
+- [x] Implement TailWind  
 - [ ] Implement DaisyUI  
 - [ ] Implement PolygonID  
