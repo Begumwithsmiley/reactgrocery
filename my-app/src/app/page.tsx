@@ -53,17 +53,17 @@ function Profile() {
         <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
     
       </div>
-      </div>
-      </div>
-      {chain && <div>Connected to {address}  on {chain.name}</div>}
+      {chain && <div>Connected to {address}  on {chain.name}</div>}<br></br>
         {chains && (
-           <div>Available chains: {chains.map((chain) => chain.name)} 
+           <div>
            </div>
         )}
-        
-         
       </div>
       
+      </div>
+
+      </div>
+    
     </div>
     
     )
