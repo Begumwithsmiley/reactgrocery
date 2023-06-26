@@ -55,15 +55,15 @@ function Profile() {
       </div>
       </div>
       </div>
-      
-          Connected to {address}  <br></br>
-         
-      </div>
-      {chain && <div>Connected to {chain.name}</div>}
+      {chain && <div>Connected to {address}  on {chain.name}</div>}
         {chains && (
            <div>Available chains: {chains.map((chain) => chain.name)} 
            </div>
         )}
+        
+         
+      </div>
+      
     </div>
     
     )
