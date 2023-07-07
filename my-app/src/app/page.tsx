@@ -14,7 +14,7 @@ export default function App() {
   return (
     <WagmiConfig config={config}>
       <Profile />
-      
+
     </WagmiConfig>
   )
 }
@@ -28,44 +28,44 @@ function Profile() {
     connector: new InjectedConnector(),
   })
   const { disconnect } = useDisconnect()
-  
+
   const { chain, chains } = useNetwork()
 
 
 
   if (isConnected)
     return (
-          
+
       <div>
-        
+
         <button className="btn btn-secondary" onClick={() => disconnect()}>Disconnect</button>
         <div className="hero min-h-screen bg-base-100">
-        <div className="hero-content text-center">
-        <div className="max-w-md">
-          <p className="py-3">Let's join to adventure with us. </p>
-        <div className="rating gap-1 text-2xl font-bold underline">
-      
-        Hello world!
-        <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
-        <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400"  />
-        <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
-        <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
-        <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
-    
-      </div>
-      {chain && <div>Connected to {address}  on {chain.name}</div>}<br></br>
-        {chains && (
-           <div>
-           </div>
-        )}
-      </div>
-      
-      </div>
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <p className="py-3">Let's join to adventure with us. </p>
+              <div className="rating gap-1 text-2xl font-bold underline">
+
+                Hello world!
+                <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
+
+              </div>
+              {chain && <div>Connected to {address}  on {chain.name}</div>}<br></br>
+              {chains && (
+                <div>
+                </div>
+              )}
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
-    
-    </div>
-    
+
     )
   return <button className="btn btn-primary" onClick={() => connect()}>Connect Wallet</button>
 }
